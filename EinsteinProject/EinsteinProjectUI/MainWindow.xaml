@@ -24,7 +24,7 @@
             <RowDefinition Height="20" />
         </Grid.RowDefinitions>
 
-        <Label Grid.Row="1" 
+        <Label Name="lblHeading" Grid.Row="1" 
                Grid.Column="1" 
                Grid.ColumnSpan="2" 
                Content="Five facts about Albert Einstein" 
@@ -37,10 +37,21 @@
             Grid.Column="1" 
             Grid.Row="2" 
             Margin="10"
-            Source="Images\Einstein.jpg" />
+            Source="Images/Einstein.jpg" />
 
-        <!--<Text Grid.Column="2" Grid.Row="2" Content="Test"/>-->
-        <Button Grid.Column="2" 
+        <TextBlock  Name="tbkTextBody"
+            Text =
+           "Fact 1: Einstein loved sailing even though he wasn't very good at it. &#10;
+Fact 2: Einstein didn't wear socks because they often woukd get holes in them. &#10;
+Fact 3: Einstein co-invented a refrigerator that operated on compressed gases. &#10;
+Fact 4: Einstein is an anagram of 'Ten Elite brains'.&#10;
+Fact 5: Einstein begain his fascination with Science after his father showed him a simple pocket compass. &#10;"
+TextWrapping="Wrap" 
+            
+             Grid.Column="2" Grid.Row="2" FontSize="14" />
+        
+
+            <Button Grid.Column="2" 
                 Grid.Row="3" 
                 Width="150"
                 Height="25"
@@ -50,6 +61,5 @@
                 Name="btnClose"
                 Click="btnClose_Click"
                 Content="Close" />
-        <ToolBar Grid.ColumnSpan="3" HorizontalAlignment="Left" Height="100" Grid.RowSpan="3" VerticalAlignment="Top" Width="100"/>
-    </Grid>
+</Grid>
 </Window>
